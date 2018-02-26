@@ -1,28 +1,54 @@
 .BoardsIndex {
-  text-align: center;
+  margin: auto;
 }
 
-.BoardsIndex-logo {
-  animation: BoardsIndex-logo-spin infinite 20s linear;
-  height: 80px;
+.BoardsIndex-container {
+  margin: 0 auto;
+  max-width: 1250px;
+  padding: 20px 16px 0;
 }
 
 .BoardsIndex-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+  margin: 0 0 0 38px;
+  padding: 0 0 11px;
+  position: relative;
 }
 
-.BoardsIndex-title {
-  font-size: 1.5em;
+.BoardsIndex-header-icon {
+  left: -38px;
+  position: absolute;
+  top: 0;
 }
 
-.BoardsIndex-intro {
-  font-size: large;
+.BoardsIndex-header-icon-member {
+  color: #999;
+  height: 32px;
+  font-size: 20px;
+  line-height: 30px;
+  width: 30px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  font-family: trellicons;
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
 }
 
-@keyframes BoardsIndex-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.BoardsIndex-header-icon-member:before {
+  content: "\E936";
+}
+
+.BoardsIndex-header-name {
+  display: inline-block;
+  line-height: 24px;
+  margin: 3px 0 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.BoardsIndex-list-container {
+  display: flex;
+  flex-wrap: wrap;
 }
