@@ -1,1 +1,50 @@
+.BoardTile {
+  box-sizing: border-box;
+  padding: 0 8px 8px 0;
+  position: relative;
+  width: 25%;
+}
 
+.BoardTile-link,
+.BoardTile-fade {
+  border-radius: 3px;
+  display: block;
+}
+
+.BoardTile-link {
+  background-color: #959da1;
+  color: #fff;
+  line-height: 20px;
+  margin: 0 8px 8px 0;
+  padding: 8px;
+  position: relative;
+  text-decoration: none;
+}
+
+.BoardTile-fade {
+  background-color: rgba(0,0,0,.15);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.BoardTile-link:hover .BoardTile-fade {
+  background-color: rgba(0,0,0,.25);
+}
+
+.BoardTile-details {
+  display: block;
+  min-height: 64px;
+  padding-right: 40px;
+  position: relative;
+}
+
+.BoardTile-details-name {
+  font-size: 16px;
+  font-weight: 700;
+  display: inline-block;
+  overflow: hidden;
+  max-height: 40px;
+}

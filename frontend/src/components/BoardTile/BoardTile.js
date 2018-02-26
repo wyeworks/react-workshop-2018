@@ -5,11 +5,16 @@ import './BoardTile.css';
 class BoardTile extends Component {
   render() {
     return (
-      <Link className="BoardTile" to={`/boards/${this.props.name}`} style={{backgroundColor: this.props.color}}>
-        <span class="BoardTile-details">
-          <span title={this.props.name} class="BoardTile-details-name">{this.props.name}</span>
-        </span>
-      </Link>
+      <li className="BoardTile">
+        <Link className="BoardTile-link" to={`/boards/${this.props.name}`} style={{backgroundColor: this.props.color}}>
+          <span class="BoardTile-fade"></span>
+          <span className="BoardTile-details">
+            <span className="BoardTile-details-name">
+              {this.props.name}
+            </span>
+          </span>
+        </Link>
+      </li>
     );
   }
 }
