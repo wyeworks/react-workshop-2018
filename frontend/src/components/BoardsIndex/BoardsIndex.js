@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './BoardsIndex.css';
 import BoardTile from '../BoardTile/BoardTile';
+import CreateBoardTile from '../CreateBoardTile/CreateBoardTile';
 
 class BoardsIndex extends Component {
   render() {
@@ -18,6 +19,8 @@ class BoardsIndex extends Component {
             <BoardTile name="Board-1" />
             <BoardTile name="Board-2" color="rgb(150, 121, 191)" />
             <BoardTile name="Board-3" color="rgb(150, 0, 0)" />
+
+            <CreateBoardTile />
           </ul>
         </div>
       </div>
