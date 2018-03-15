@@ -7,7 +7,7 @@ class BoardTile extends Component {
     return (
       <li className="BoardTile">
         <Link className="BoardTile-link" to={`/boards/${this.props.name}`} style={{backgroundColor: this.props.color}}>
-          <span class="BoardTile-fade"></span>
+          <span className="BoardTile-fade"></span>
           <span className="BoardTile-details">
             <span className="BoardTile-details-name">
               {this.props.name}
