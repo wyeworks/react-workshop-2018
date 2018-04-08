@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Card from '../Card/Card';
 import './List.css';
 
 class List extends Component {
@@ -15,9 +16,7 @@ class List extends Component {
           <div className="List-cards">
             {
               this.props.cards.map((card, index) => {
-                return <div key={`card-${index}`}>
-                  {card}
-                </div>
+                return <Card key={`card-${index}`} title={card} />
               })
             }
           </div>
