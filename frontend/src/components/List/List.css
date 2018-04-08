@@ -1,0 +1,52 @@
+.List {
+  width: 270px;
+  margin: 0 5px;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.List:first-child {
+  margin-left: 10px;
+}
+
+.List-content {
+  background: #e2e4e6;
+  border-radius: 3px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+  position: relative;
+  white-space: normal;
+}
+
+.List-header {
+  flex: 0 0 auto;
+  padding: 8px 10px;
+  position: relative;
+  min-height: 18px;
+}
+
+.List-header-title {
+  font-weight: 700;
+  margin: -3px -5px;
+  padding: 3px 5px;
+  overflow: hidden;
+  word-wrap: break-word;
+  height: 24px;
+}
+
+.List-cards {
+  flex: 1 1 auto;
+  margin-bottom: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: 0 4px;
+  padding: 0 4px;
+  z-index: 1;
+  min-height: 0;
+}

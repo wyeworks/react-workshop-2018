@@ -5,18 +5,22 @@ class List extends Component {
   render() {
     return (
       <div className="List">
-        <span className="List-details">
-          <span title={this.props.name} className="List-details-name">{this.props.name}</span>
-        </span>
-        <div>
-          {
-            this.props.cards.map((card, index) => {
-              return <div key={`card-${index}`}>
-                <b>{card.name}</b>
-                {card.text}
-              </div>
-            })
-          }
+        <div className="List-content">
+          <div className="List-header">
+            <div className="List-header-title">
+              {this.props.name}
+            </div>
+          </div>
+
+          <div className="List-cards">
+            {
+              this.props.cards.map((card, index) => {
+                return <div key={`card-${index}`}>
+                  {card}
+                </div>
+              })
+            }
+          </div>
         </div>
       </div>
     );
@@ -26,6 +30,6 @@ class List extends Component {
 export default List;
 
 List.defaultProps = {
-  cards: [{ name: 'Card1', text: 'text1' }, { name: 'Card2', text: 'text2' }, { name: 'Card3', text: 'text3' }],
+  cards: ['text1', 'text2', 'text3'],
   name: 'List1'
 };
