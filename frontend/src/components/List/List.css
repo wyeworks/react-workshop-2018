@@ -67,3 +67,50 @@
   color: #4d4d4d;
   text-decoration: underline;
 }
+
+.List-composer {
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 6px 6px 2px 8px;
+  display: block;
+  transition: background 85ms ease-in,border-color 85ms ease-in;
+  width: 100%;
+  margin-bottom: 6px;
+  overflow: hidden;
+  word-wrap: break-word;
+  resize: none;
+  height: 54px;
+  outline: 0;
+}
+
+.List-composer-add {
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  margin: 0 4px 8px 0;
+  min-height: 32px;
+  padding: 4px 16px;
+  vertical-align: top;
+  background: #5aac44;
+  box-shadow: 0 1px 0 #519839;
+  color: #fff;
+  transition: background .3s ease;
+}
+
+.List-composer-close {
+  display: inline-block;
+  font-family: trellicons;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 30px;
+  width: 30px;
+  color: #999;
+}
+
+.List-composer-close:before {
+  content: "\E916";
+}

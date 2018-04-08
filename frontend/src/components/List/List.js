@@ -3,6 +3,17 @@ import Card from '../Card/Card';
 import './List.css';
 
 class List extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { composing: false };
+  }
+
+  toggleComposer = () => {
+    this.setState(prevState => ({
+      composing: !prevState.composing
+    }));
+  }
+
   render() {
     return (
       <div className="List">
@@ -19,9 +30,19 @@ class List extends Component {
                 return <Card key={`card-${index}`} title={card} />
               })
             }
+
+            {this.state.composing &&
+              <div>
+                <textarea className="List-composer"></textarea>
+                <input className="List-composer-add" type="submit" value="Add"/>
+                <a className="List-composer-close" href="#" onClick={this.toggleComposer}></a>
+              </div>
+            }
           </div>
 
-          <a className="List-add-card" href="#">Add a card…</a>
+          {!this.state.composing &&
+            <a className="List-add-card" href="#" onClick={this.toggleComposer}>Add a card…</a>
+          }
         </div>
       </div>
     );
