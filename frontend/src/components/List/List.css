@@ -50,3 +50,20 @@
   z-index: 1;
   min-height: 0;
 }
+
+.List-add-card {
+  border-radius: 0 0 3px 3px;
+  color: #838c91;
+  display: block;
+  flex: 0 0 auto;
+  padding: 8px 10px;
+  position: relative;
+  text-decoration: none;
+  user-select: none;
+}
+
+.List-add-card:hover {
+  background-color: #cdd2d4;
+  color: #4d4d4d;
+  text-decoration: underline;
+}

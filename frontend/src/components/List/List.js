@@ -20,6 +20,8 @@ class List extends Component {
               })
             }
           </div>
+
+          <a className="List-add-card" href="#">Add a card…</a>
         </div>
       </div>
     );
