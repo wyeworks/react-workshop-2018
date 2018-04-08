@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './BoardsShow.css';
 import List from '../List/List';
+import CreateList from '../CreateList/CreateList';
 
 class BoardsShow extends Component {
   render() {
@@ -17,6 +18,8 @@ class BoardsShow extends Component {
             <div className="BoardsShow-canvas-content">
               <List name="List1" />
               <List name="List2" />
+
+              <CreateList />
             </div>
           </div>
         </div>

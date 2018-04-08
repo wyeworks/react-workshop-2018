@@ -1,0 +1,28 @@
+.CreateList {
+  width: 270px;
+  margin: 0 5px;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+
+  height: auto;
+  min-height: 30px;
+  padding: 4px;
+  border-radius: 3px;
+  background-color: #e2e4e6;
+  transition: background 85ms ease-in,opacity 40ms ease-in,border-color 85ms ease-in;
+
+  background: rgba(0,0,0,.12);
+  cursor: pointer;
+  color: #fff;
+
+  margin-right: 10px;
+}
+
+.CreateList-placeholder {
+  display: block;
+  padding: 7px;
+  color: hsla(0,0%,100%,.7);
+  transition: color 85ms ease-in;
+}
