@@ -20,11 +20,11 @@
   display: block;
   height: 30px;
   left: 50%;
-  margin-left: -40px;
+  margin-left: -75px;
   opacity: .5;
   position: absolute;
   top: 5px;
-  width: 80px;
+  width: 150px;
   text-align: center;
   -webkit-transition: .1s ease;
   transition: .1s ease;
@@ -33,16 +33,20 @@
   background-color: transparent;
 }
 
+.App-header-logo:hover {
+  opacity: .8;
+}
+
 .App-header-logo-default {
-  background-image: url(https://a.trellocdn.com/dist/images/header-logo-2x.01ef898811a879595cea.png);
+  background-image: url('./wye_trello_works.png');
   background-position: 100% 0;
   background-repeat: no-repeat;
-  background-size: 80px 30px;
+  background-size: 150px 30px;
   height: 30px;
   position: absolute;
   right: 0;
   top: 0;
-  width: 80px;
+  width: 150px;
 }
 
 .App-content {
