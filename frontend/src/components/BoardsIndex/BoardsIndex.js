@@ -4,6 +4,17 @@ import BoardTile from '../BoardTile/BoardTile';
 import CreateBoardTile from '../CreateBoardTile/CreateBoardTile';
 
 class BoardsIndex extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { boards: [] };
+  }
+
+  componentDidMount() {
+    fetch("/boards").then(res => res.json()).then((boards) => {
+      this.setState({ boards });
+    });
+  }
+
   render() {
     return (
       <div className="BoardsIndex">
@@ -16,9 +27,11 @@ class BoardsIndex extends Component {
           </div>
 
           <ul className="BoardsIndex-list-container">
-            <BoardTile name="Board-1" />
-            <BoardTile name="Board-2" color="rgb(150, 121, 191)" />
-            <BoardTile name="Board-3" color="rgb(150, 0, 0)" />
+            {
+              this.state.boards.map((board) => {
+                return <BoardTile name={board.name} key={board.id} />
+              })
+            }
 
             <CreateBoardTile />
           </ul>
