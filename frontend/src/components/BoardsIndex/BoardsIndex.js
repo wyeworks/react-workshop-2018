@@ -29,7 +29,7 @@ class BoardsIndex extends Component {
           <ul className="BoardsIndex-list-container">
             {
               this.state.boards.map((board) => {
-                return <BoardTile name={board.name} key={board.id} />
+                return <BoardTile name={board.name} id={board.id} key={board.id} />
               })
             }
 

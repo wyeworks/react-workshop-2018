@@ -6,7 +6,7 @@ class BoardTile extends Component {
   render() {
     return (
       <li className="BoardTile">
-        <Link className="BoardTile-link" to={`/boards/${this.props.name}`}>
+        <Link className="BoardTile-link" to={`/boards/${this.props.id}`}>
           <span className="BoardTile-fade"></span>
           <span className="BoardTile-details">
             <span className="BoardTile-details-name">
