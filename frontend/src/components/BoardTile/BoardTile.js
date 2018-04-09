@@ -6,7 +6,7 @@ class BoardTile extends Component {
   render() {
     return (
       <li className="BoardTile">
-        <Link className="BoardTile-link" to={`/boards/${this.props.name}`} style={{backgroundColor: this.props.color}}>
+        <Link className="BoardTile-link" to={`/boards/${this.props.name}`}>
           <span className="BoardTile-fade"></span>
           <span className="BoardTile-details">
             <span className="BoardTile-details-name">
@@ -20,7 +20,3 @@ class BoardTile extends Component {
 }
 
 export default BoardTile;
-
-BoardTile.defaultProps = {
-  color: 'rgb(0, 121, 191)'
-};
