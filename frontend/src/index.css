@@ -51,6 +51,64 @@ ol, ul {
   padding: 0;
 }
 
+.App-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.App-header {
+  height: 30px;
+  position: relative;
+  flex: none;
+  background: #026aa7;
+  overflow: hidden;
+  padding: 5px 8px;
+  z-index: 10;
+  box-shadow: 0 1px 1px rgba(0,0,0,.1);
+}
+
+.App-header-logo {
+  bottom: 0;
+  display: block;
+  height: 30px;
+  left: 50%;
+  margin-left: -75px;
+  opacity: .5;
+  position: absolute;
+  top: 5px;
+  width: 150px;
+  text-align: center;
+  -webkit-transition: .1s ease;
+  transition: .1s ease;
+  z-index: 2;
+  color: #444;
+  background-color: transparent;
+}
+
+.App-header-logo:hover {
+  opacity: .8;
+}
+
+.App-header-logo-default {
+  background-image: url('./wye_trello_works.png');
+  background-position: 100% 0;
+  background-repeat: no-repeat;
+  background-size: 150px 30px;
+  height: 30px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 150px;
+}
+
+.App-content {
+  flex-grow: 1;
+  outline: none;
+  position: relative;
+  overflow-y: auto;
+}
+
 .BoardsIndex {
   margin: auto;
 }

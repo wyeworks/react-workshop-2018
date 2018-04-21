@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import BoardsIndex from './components/BoardsIndex/BoardsIndex';
 import BoardsShow from './components/BoardsShow/BoardsShow';
 import CreateBoard from './components/CreateBoard/CreateBoard';
-import './App.css';
 
 class App extends Component {
   render() {
