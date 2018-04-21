@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import List from '../List/List';
-import CreateList from '../CreateList/CreateList';
+import List from './List';
+import CreateList from './CreateList';
 
 class BoardsShow extends Component {
   constructor(props) {

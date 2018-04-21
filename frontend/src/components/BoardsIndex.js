@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import BoardTile from '../BoardTile/BoardTile';
-import CreateBoardTile from '../CreateBoardTile/CreateBoardTile';
+import BoardTile from './BoardTile';
+import CreateBoardTile from './CreateBoardTile';
 
 class BoardsIndex extends Component {
   constructor(props) {
