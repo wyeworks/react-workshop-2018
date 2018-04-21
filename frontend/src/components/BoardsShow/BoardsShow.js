@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './BoardsShow.css';
 import List from '../List/List';
 import CreateList from '../CreateList/CreateList';
 
