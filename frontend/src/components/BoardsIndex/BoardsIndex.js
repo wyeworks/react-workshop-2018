@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './BoardsIndex.css';
 import BoardTile from '../BoardTile/BoardTile';
 import CreateBoardTile from '../CreateBoardTile/CreateBoardTile';
 

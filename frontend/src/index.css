@@ -50,3 +50,58 @@ ol, ul {
   margin: 0;
   padding: 0;
 }
+
+.BoardsIndex {
+  margin: auto;
+}
+
+.BoardsIndex-container {
+  margin: 0 auto;
+  max-width: 1250px;
+  padding: 20px 16px 0;
+}
+
+.BoardsIndex-header {
+  margin: 0 0 0 38px;
+  padding: 0 0 11px;
+  position: relative;
+}
+
+.BoardsIndex-header-icon {
+  left: -38px;
+  position: absolute;
+  top: 0;
+}
+
+.BoardsIndex-header-icon-member {
+  color: #999;
+  height: 32px;
+  font-size: 20px;
+  line-height: 30px;
+  width: 30px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  font-family: trellicons;
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+}
+
+.BoardsIndex-header-icon-member:before {
+  content: "\E938";
+}
+
+.BoardsIndex-header-name {
+  display: inline-block;
+  line-height: 24px;
+  margin: 3px 0 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.BoardsIndex-list-container {
+  display: flex;
+  flex-wrap: wrap;
+}
