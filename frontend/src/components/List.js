@@ -7,7 +7,7 @@ class List extends Component {
     this.state = {
       cards: [],
       composing: false,
-      newCardTitle: ''
+      newCardText: ''
     };
   }
 
@@ -23,9 +23,9 @@ class List extends Component {
     }));
   }
 
-  newCardTitleChange = (e) => {
+  newCardTextChange = (e) => {
     this.setState({
-      newCardTitle: e.target.value
+      newCardText: e.target.value
     });
   }
 
@@ -40,7 +40,7 @@ class List extends Component {
       },
       body: JSON.stringify({
         card: {
-          text: this.state.newCardTitle
+          text: this.state.newCardText
         }
       }),
     }).then((response) => {
@@ -52,7 +52,7 @@ class List extends Component {
       return response.json();
     }).then((card) => {
       this.toggleComposer();
-      this.setState({newCardTitle: ''});
+      this.setState({newCardText: ''});
     }).catch(function(error) {
       console.log(error);
     });
@@ -71,14 +71,14 @@ class List extends Component {
           <div className="List-cards">
             {
               this.state.cards.map((card) => {
-                return <Card key={card.id} title={card.text} />
+                return <Card key={card.id} text={card.text} />
               })
             }
 
             {this.state.composing &&
               <div>
                 <form onSubmit={this.handleSubmit}>
-                  <textarea className="List-composer" value={this.state.newCardTitle} onChange={this.newCardTitleChange}></textarea>
+                  <textarea className="List-composer" value={this.state.newCardText} onChange={this.newCardTextChange}></textarea>
                   <input className="List-composer-add" type="submit" value="Add"/>
                   <a className="List-composer-close" href="#" onClick={this.toggleComposer}></a>
                 </form>
