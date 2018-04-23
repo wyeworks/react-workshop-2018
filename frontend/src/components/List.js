@@ -25,7 +25,30 @@ class List extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
 
-    alert(this.state.newCardTitle);
+    fetch(`/boards/${this.props.boardId}/lists/${this.props.id}/cards`, {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        card: {
+          text: this.state.newCardTitle
+        }
+      }),
+    }).then((response) => {
+      if (!response.ok) {
+        throw Error(response.statusText);
+      }
+      return response;
+    }).then((response) => {
+      return response.json();
+    }).then((card) => {
+      this.toggleComposer();
+      this.setState({newCardTitle: ''});
+    }).catch(function(error) {
+      console.log(error);
+    });
   }
 
   render() {

@@ -32,7 +32,7 @@ class BoardsShow extends Component {
             <div className="BoardsShow-canvas-content">
               {
                 this.state.lists.map((list) => {
-                  return <List name={list.name} key={list.id} />
+                  return <List id={list.id} name={list.name} key={list.id} boardId={this.boardId}/>
                 })
               }
 
