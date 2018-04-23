@@ -52,7 +52,10 @@ class List extends Component {
       return response.json();
     }).then((card) => {
       this.toggleComposer();
-      this.setState({newCardText: ''});
+      this.setState(prevState => ({
+        cards: [...prevState.cards, card],
+        newCardText: ''
+      }))
     }).catch(function(error) {
       console.log(error);
     });
