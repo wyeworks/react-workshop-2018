@@ -5,9 +5,16 @@ class List extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      cards: [],
       composing: false,
       newCardTitle: ''
     };
+  }
+
+  componentDidMount() {
+    fetch(`/boards/${this.props.boardId}/lists/${this.props.id}/cards`).then(res => res.json()).then((cards) => {
+      this.setState({ cards });
+    });
   }
 
   toggleComposer = () => {
@@ -63,8 +70,8 @@ class List extends Component {
 
           <div className="List-cards">
             {
-              this.props.cards.map((card, index) => {
-                return <Card key={`card-${index}`} title={card} />
+              this.state.cards.map((card) => {
+                return <Card key={card.id} title={card.text} />
               })
             }
 
@@ -89,8 +96,3 @@ class List extends Component {
 }
 
 export default List;
-
-List.defaultProps = {
-  cards: ['text1', 'text2', 'text3'],
-  name: 'List1'
-};
