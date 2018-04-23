@@ -4,13 +4,28 @@ import Card from './Card';
 class List extends Component {
   constructor(props) {
     super(props);
-    this.state = { composing: false };
+    this.state = {
+      composing: false,
+      newCardTitle: ''
+    };
   }
 
   toggleComposer = () => {
     this.setState(prevState => ({
       composing: !prevState.composing
     }));
+  }
+
+  newCardTitleChange = (e) => {
+    this.setState({
+      newCardTitle: e.target.value
+    });
+  }
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+
+    alert(this.state.newCardTitle);
   }
 
   render() {
@@ -32,9 +47,11 @@ class List extends Component {
 
             {this.state.composing &&
               <div>
-                <textarea className="List-composer"></textarea>
-                <input className="List-composer-add" type="submit" value="Add"/>
-                <a className="List-composer-close" href="#" onClick={this.toggleComposer}></a>
+                <form onSubmit={this.handleSubmit}>
+                  <textarea className="List-composer" value={this.state.newCardTitle} onChange={this.newCardTitleChange}></textarea>
+                  <input className="List-composer-add" type="submit" value="Add"/>
+                  <a className="List-composer-close" href="#" onClick={this.toggleComposer}></a>
+                </form>
               </div>
             }
           </div>
