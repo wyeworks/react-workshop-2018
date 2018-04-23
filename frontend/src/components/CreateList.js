@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './CreateList.css';
 
 class CreateList extends Component {
   constructor(props) {
