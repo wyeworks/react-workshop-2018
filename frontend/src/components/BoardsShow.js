@@ -36,7 +36,7 @@ class BoardsShow extends Component {
                 })
               }
 
-              <CreateList />
+              <CreateList boardId={this.boardId}/>
             </div>
           </div>
         </div>
