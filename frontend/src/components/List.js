@@ -5,16 +5,10 @@ class List extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      cards: [],
+      cards: props.cards,
       composing: false,
       newCardText: ''
     };
-  }
-
-  componentDidMount() {
-    fetch(`/boards/${this.props.boardId}/lists/${this.props.id}/cards`).then(res => res.json()).then((cards) => {
-      this.setState({ cards });
-    });
   }
 
   toggleComposer = () => {
