@@ -43,6 +43,7 @@ class CreateList extends Component {
     }).then((response) => {
       return response.json();
     }).then((list) => {
+      this.props.onListCreation(list);
       this.toggleAddList();
       this.setState({newListName: ''})
     }).catch(function(error) {

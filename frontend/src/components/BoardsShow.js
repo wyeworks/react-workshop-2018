@@ -18,6 +18,12 @@ class BoardsShow extends Component {
     });
   }
 
+  handleAddList(list) {
+    this.setState(prevState => ({
+      lists: [...prevState.lists, list]
+    }));
+  }
+
   render() {
     return (
       <div className="BoardsShow">
@@ -36,7 +42,7 @@ class BoardsShow extends Component {
                 })
               }
 
-              <CreateList boardId={this.boardId}/>
+              <CreateList boardId={this.boardId} onListCreation={this.handleAddList.bind(this)}/>
             </div>
           </div>
         </div>
