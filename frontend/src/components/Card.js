@@ -5,7 +5,7 @@ class Card extends Component {
     return (
       <div className="Card">
         <div className="Card-details">
-          <span className="Card-title">{this.props.title}</span>
+          <span className="Card-title">{this.props.text}</span>
         </div>
       </div>
     );

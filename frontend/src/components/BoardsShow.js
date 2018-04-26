@@ -18,6 +18,12 @@ class BoardsShow extends Component {
     });
   }
 
+  handleAddList(list) {
+    this.setState(prevState => ({
+      lists: [...prevState.lists, list]
+    }));
+  }
+
   render() {
     return (
       <div className="BoardsShow">
@@ -32,11 +38,11 @@ class BoardsShow extends Component {
             <div className="BoardsShow-canvas-content">
               {
                 this.state.lists.map((list) => {
-                  return <List name={list.name} key={list.id} />
+                  return <List id={list.id} name={list.name} key={list.id} boardId={this.boardId} cards={list.cards}/>
                 })
               }
 
-              <CreateList />
+              <CreateList boardId={this.boardId} onListCreation={this.handleAddList.bind(this)}/>
             </div>
           </div>
         </div>

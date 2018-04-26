@@ -4,13 +4,55 @@ import Card from './Card';
 class List extends Component {
   constructor(props) {
     super(props);
-    this.state = { composing: false };
+    this.state = {
+      cards: props.cards,
+      composing: false,
+      newCardText: ''
+    };
   }
 
   toggleComposer = () => {
     this.setState(prevState => ({
       composing: !prevState.composing
     }));
+  }
+
+  newCardTextChange = (e) => {
+    this.setState({
+      newCardText: e.target.value
+    });
+  }
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+
+    fetch(`/boards/${this.props.boardId}/lists/${this.props.id}/cards`, {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        card: {
+          text: this.state.newCardText
+        }
+      }),
+    }).then((response) => {
+      if (!response.ok) {
+        throw Error(response.statusText);
+      }
+      return response;
+    }).then((response) => {
+      return response.json();
+    }).then((card) => {
+      this.toggleComposer();
+      this.setState(prevState => ({
+        cards: [...prevState.cards, card],
+        newCardText: ''
+      }))
+    }).catch(function(error) {
+      console.log(error);
+    });
   }
 
   render() {
@@ -25,16 +67,18 @@ class List extends Component {
 
           <div className="List-cards">
             {
-              this.props.cards.map((card, index) => {
-                return <Card key={`card-${index}`} title={card} />
+              this.state.cards.map((card) => {
+                return <Card key={card.id} text={card.text} />
               })
             }
 
             {this.state.composing &&
               <div>
-                <textarea className="List-composer"></textarea>
-                <input className="List-composer-add" type="submit" value="Add"/>
-                <a className="List-composer-close" href="#" onClick={this.toggleComposer}></a>
+                <form onSubmit={this.handleSubmit}>
+                  <textarea className="List-composer" value={this.state.newCardText} onChange={this.newCardTextChange}></textarea>
+                  <input className="List-composer-add" type="submit" value="Add"/>
+                  <a className="List-composer-close" href="#" onClick={this.toggleComposer}></a>
+                </form>
               </div>
             }
           </div>
@@ -49,8 +93,3 @@ class List extends Component {
 }
 
 export default List;
-
-List.defaultProps = {
-  cards: ['text1', 'text2', 'text3'],
-  name: 'List1'
-};
