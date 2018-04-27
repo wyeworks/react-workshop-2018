@@ -66,7 +66,7 @@ class NewList extends Component {
               </form>
             </div>
           :
-            <span className="NewList-placeholder" onClick={this.toggleAddList}>Add a list…</span>
+            <a className="NewList-placeholder" href="#" onClick={this.toggleAddList}>Add a list…</a>
         }
       </div>
     );
