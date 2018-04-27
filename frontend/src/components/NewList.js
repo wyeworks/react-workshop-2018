@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class CreateList extends Component {
+class NewList extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -53,24 +53,24 @@ class CreateList extends Component {
 
   render() {
     return (
-      <div className={`CreateList ${ this.state.addingList ? 'CreateList-adding-list' : '' }`}>
+      <div className={`NewList ${ this.state.addingList ? 'NewList-adding-list' : '' }`}>
         {
           this.state.addingList ?
             <div>
               <form onSubmit={this.handleSubmit}>
-                <input className="CreateList-input" type="text" name="name" placeholder="Add a list…" autoComplete="off" value={this.state.newListName} onChange={this.newListNameChange}/>
-                <div className="CreateList-controls">
-                  <input className="CreateList-button" type="submit" value="Save"/>
-                  <a className="CreateList-close" href="#" onClick={this.toggleAddList}></a>
+                <input className="NewList-input" type="text" name="name" placeholder="Add a list…" autoComplete="off" value={this.state.newListName} onChange={this.newListNameChange}/>
+                <div className="NewList-controls">
+                  <input className="NewList-button" type="submit" value="Save"/>
+                  <a className="NewList-close" href="#" onClick={this.toggleAddList}></a>
                 </div>
               </form>
             </div>
           :
-            <span className="CreateList-placeholder" onClick={this.toggleAddList}>Add a list…</span>
+            <span className="NewList-placeholder" onClick={this.toggleAddList}>Add a list…</span>
         }
       </div>
     );
   }
 }
 
-export default CreateList;
+export default NewList;

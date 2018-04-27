@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ListTile from './ListTile';
-import CreateList from './CreateList';
+import NewList from './NewList';
 
 class Board extends Component {
   constructor(props) {
@@ -42,7 +42,7 @@ class Board extends Component {
                 })
               }
 
-              <CreateList boardId={this.boardId} onListCreation={this.handleAddList.bind(this)}/>
+              <NewList boardId={this.boardId} onListCreation={this.handleAddList.bind(this)}/>
             </div>
           </div>
         </div>

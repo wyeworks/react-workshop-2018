@@ -595,7 +595,7 @@ ol, ul {
   content: "\E916";
 }
 
-.CreateList {
+.NewList {
   width: 270px;
   margin: 0 5px;
   box-sizing: border-box;
@@ -617,14 +617,14 @@ ol, ul {
   margin-right: 10px;
 }
 
-.CreateList-placeholder {
+.NewList-placeholder {
   display: block;
   padding: 7px;
   color: hsla(0,0%,100%,.7);
   transition: color 85ms ease-in;
 }
 
-.CreateList-adding-list {
+.NewList-adding-list {
   height: auto;
   min-height: 30px;
   padding: 4px;
@@ -632,7 +632,7 @@ ol, ul {
   background-color: #e2e4e6;
 }
 
-.CreateList-input {
+.NewList-input {
   box-sizing: border-box;
   border: 1px solid #aaa;
   border-radius: 3px;
@@ -644,12 +644,12 @@ ol, ul {
   width: 100%;
 }
 
-.CreateList-controls {
+.NewList-controls {
   transition: margin 85ms ease-in,height 85ms ease-in;
   margin: 4px 0 0;
 }
 
-.CreateList-button {
+.NewList-button {
   border-radius: 3px;
   cursor: pointer;
   font-weight: 700;
@@ -664,7 +664,7 @@ ol, ul {
   background: #5aac44;
 }
 
-.CreateList-close {
+.NewList-close {
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -676,7 +676,7 @@ ol, ul {
   color: #999;
 }
 
-.CreateList-close:before {
+.NewList-close:before {
   content: "\E916";
 }
 
