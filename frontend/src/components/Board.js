@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import List from './List';
+import ListTile from './ListTile';
 import CreateList from './CreateList';
 
 class Board extends Component {
@@ -38,7 +38,7 @@ class Board extends Component {
             <div className="Board-canvas-content">
               {
                 this.state.lists.map((list) => {
-                  return <List id={list.id} name={list.name} key={list.id} boardId={this.boardId} cards={list.cards}/>
+                  return <ListTile id={list.id} name={list.name} key={list.id} boardId={this.boardId} cards={list.cards}/>
                 })
               }
 

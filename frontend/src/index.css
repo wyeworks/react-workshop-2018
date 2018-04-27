@@ -478,7 +478,7 @@ ol, ul {
   font-weight: 700;
 }
 
-.List {
+.ListTile {
   width: 270px;
   margin: 0 5px;
   height: 100%;
@@ -489,11 +489,11 @@ ol, ul {
   white-space: nowrap;
 }
 
-.List:first-child {
+.ListTile:first-child {
   margin-left: 10px;
 }
 
-.List-content {
+.ListTile-content {
   background: #e2e4e6;
   border-radius: 3px;
   box-sizing: border-box;
@@ -504,14 +504,14 @@ ol, ul {
   white-space: normal;
 }
 
-.List-header {
+.ListTile-header {
   flex: 0 0 auto;
   padding: 8px 10px;
   position: relative;
   min-height: 18px;
 }
 
-.List-header-title {
+.ListTile-header-title {
   font-weight: 700;
   margin: -3px -5px;
   padding: 3px 5px;
@@ -520,7 +520,7 @@ ol, ul {
   height: 24px;
 }
 
-.List-cards {
+.ListTile-cards {
   flex: 1 1 auto;
   margin-bottom: 0;
   overflow-y: auto;
@@ -531,7 +531,7 @@ ol, ul {
   min-height: 0;
 }
 
-.List-add-card {
+.ListTile-add-card {
   border-radius: 0 0 3px 3px;
   color: #838c91;
   display: block;
@@ -542,13 +542,13 @@ ol, ul {
   user-select: none;
 }
 
-.List-add-card:hover {
+.ListTile-add-card:hover {
   background-color: #cdd2d4;
   color: #4d4d4d;
   text-decoration: underline;
 }
 
-.List-composer {
+.ListTile-composer {
   box-sizing: border-box;
   border: none;
   border-bottom: 1px solid #ccc;
@@ -565,7 +565,7 @@ ol, ul {
   outline: 0;
 }
 
-.List-composer-add {
+.ListTile-composer-add {
   border-radius: 3px;
   border: none;
   cursor: pointer;
@@ -580,7 +580,7 @@ ol, ul {
   transition: background .3s ease;
 }
 
-.List-composer-close {
+.ListTile-composer-close {
   display: inline-block;
   font-family: trellicons;
   text-align: center;
@@ -591,7 +591,7 @@ ol, ul {
   color: #999;
 }
 
-.List-composer-close:before {
+.ListTile-composer-close:before {
   content: "\E916";
 }
 
