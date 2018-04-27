@@ -109,29 +109,29 @@ ol, ul {
   overflow-y: auto;
 }
 
-.BoardsIndex {
+.Boards {
   margin: auto;
 }
 
-.BoardsIndex-container {
+.Boards-container {
   margin: 0 auto;
   max-width: 1250px;
   padding: 20px 16px 0;
 }
 
-.BoardsIndex-header {
+.Boards-header {
   margin: 0 0 0 38px;
   padding: 0 0 11px;
   position: relative;
 }
 
-.BoardsIndex-header-icon {
+.Boards-header-icon {
   left: -38px;
   position: absolute;
   top: 0;
 }
 
-.BoardsIndex-header-icon-member {
+.Boards-header-icon-member {
   color: #999;
   height: 32px;
   font-size: 20px;
@@ -147,11 +147,11 @@ ol, ul {
   text-decoration: none;
 }
 
-.BoardsIndex-header-icon-member:before {
+.Boards-header-icon-member:before {
   content: "\E938";
 }
 
-.BoardsIndex-header-name {
+.Boards-header-name {
   display: inline-block;
   line-height: 24px;
   margin: 3px 0 0;
@@ -159,7 +159,7 @@ ol, ul {
   font-weight: 700;
 }
 
-.BoardsIndex-list-container {
+.Boards-list-container {
   display: flex;
   flex-wrap: wrap;
 }
