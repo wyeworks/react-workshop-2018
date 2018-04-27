@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Card from './Card';
+import CardTile from './CardTile';
 
 class ListTile extends Component {
   constructor(props) {
@@ -68,7 +68,7 @@ class ListTile extends Component {
           <div className="ListTile-cards">
             {
               this.state.cards.map((card) => {
-                return <Card key={card.id} text={card.text} />
+                return <CardTile key={card.id} text={card.text} />
               })
             }
 

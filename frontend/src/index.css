@@ -680,7 +680,7 @@ ol, ul {
   content: "\E916";
 }
 
-.Card {
+.CardTile {
   background-color: #fff;
   border-bottom: 1px solid #ccc;
   border-radius: 3px;
@@ -694,14 +694,14 @@ ol, ul {
   z-index: 0;
 }
 
-.Card-details {
+.CardTile-details {
   overflow: hidden;
   padding: 6px 6px 2px 8px;
   position: relative;
   z-index: 10;
 }
 
-.Card-title {
+.CardTile-title {
   clear: both;
   display: block;
   margin: 0 0 4px;
