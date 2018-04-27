@@ -4,18 +4,18 @@ import BoardsIndex from './components/BoardsIndex';
 import BoardsShow from './components/BoardsShow';
 import CreateBoard from './components/CreateBoard';
 
-class App extends Component {
+class WyeTrello extends Component {
   render() {
     return (
       <Router>
-        <div className="App-container">
-          <div className="App-header">
-            <Link className="App-header-logo" to="/">
-              <span className="App-header-logo-default"></span>
+        <div className="WyeTrello-container">
+          <div className="WyeTrello-header">
+            <Link className="WyeTrello-header-logo" to="/">
+              <span className="WyeTrello-header-logo-default"></span>
             </Link>
           </div>
 
-          <div className="App-content">
+          <div className="WyeTrello-content">
             <Switch>
               <Route exact path='/' component={BoardsIndex}/>
               <Route path='/boards/new' component={BoardsIndex}/>
@@ -29,4 +29,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default WyeTrello;
