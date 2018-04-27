@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import BoardTile from './BoardTile';
-import CreateBoardTile from './CreateBoardTile';
+import NewBoardLink from './NewBoardLink';
 
 class Boards extends Component {
   constructor(props) {
@@ -32,7 +32,7 @@ class Boards extends Component {
               })
             }
 
-            <CreateBoardTile />
+            <NewBoardLink />
           </ul>
         </div>
       </div>

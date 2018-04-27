@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 
-class CreateBoardTile extends Component {
+class NewBoardLink extends Component {
   render() {
     return (
-      <li className="CreateBoardTile">
-        <Link className="CreateBoardTile-link" to='/boards/new'>
+      <li className="NewBoardLink">
+        <Link className="NewBoardLink-link" to='/boards/new'>
           Create new board…
         </Link>
       </li>
@@ -13,4 +13,4 @@ class CreateBoardTile extends Component {
   }
 }
 
-export default CreateBoardTile;
+export default NewBoardLink;
