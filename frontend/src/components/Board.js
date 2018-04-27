@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import List from './List';
-import CreateList from './CreateList';
+import ListTile from './ListTile';
+import NewList from './NewList';
 
-class BoardsShow extends Component {
+class Board extends Component {
   constructor(props) {
     super(props);
     this.state = { name: "", lists: [] };
@@ -26,23 +26,23 @@ class BoardsShow extends Component {
 
   render() {
     return (
-      <div className="BoardsShow">
-        <div className="BoardsShow-content">
-          <div className="BoardsShow-header">
-            <span className="BoardsShow-header-btn" href="#">
+      <div className="Board">
+        <div className="Board-content">
+          <div className="Board-header">
+            <span className="Board-header-btn" href="#">
               {this.state.name}
             </span>
           </div>
 
-          <div className="BoardsShow-canvas">
-            <div className="BoardsShow-canvas-content">
+          <div className="Board-canvas">
+            <div className="Board-canvas-content">
               {
                 this.state.lists.map((list) => {
-                  return <List id={list.id} name={list.name} key={list.id} boardId={this.boardId} cards={list.cards}/>
+                  return <ListTile id={list.id} name={list.name} key={list.id} boardId={this.boardId} cards={list.cards}/>
                 })
               }
 
-              <CreateList boardId={this.boardId} onListCreation={this.handleAddList.bind(this)}/>
+              <NewList boardId={this.boardId} onListCreation={this.handleAddList.bind(this)}/>
             </div>
           </div>
         </div>
@@ -51,4 +51,4 @@ class BoardsShow extends Component {
   }
 }
 
-export default BoardsShow;
+export default Board;

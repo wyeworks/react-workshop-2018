@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Card from './Card';
+import CardTile from './CardTile';
 
-class List extends Component {
+class ListTile extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -57,34 +57,34 @@ class List extends Component {
 
   render() {
     return (
-      <div className="List">
-        <div className="List-content">
-          <div className="List-header">
-            <div className="List-header-title">
+      <div className="ListTile">
+        <div className="ListTile-content">
+          <div className="ListTile-header">
+            <div className="ListTile-header-title">
               {this.props.name}
             </div>
           </div>
 
-          <div className="List-cards">
+          <div className="ListTile-cards">
             {
               this.state.cards.map((card) => {
-                return <Card key={card.id} text={card.text} />
+                return <CardTile key={card.id} text={card.text} />
               })
             }
 
             {this.state.composing &&
               <div>
                 <form onSubmit={this.handleSubmit}>
-                  <textarea className="List-composer" value={this.state.newCardText} onChange={this.newCardTextChange}></textarea>
-                  <input className="List-composer-add" type="submit" value="Add"/>
-                  <a className="List-composer-close" href="#" onClick={this.toggleComposer}></a>
+                  <textarea className="ListTile-composer" value={this.state.newCardText} onChange={this.newCardTextChange}></textarea>
+                  <input className="ListTile-composer-add" type="submit" value="Add"/>
+                  <a className="ListTile-composer-close" href="#" onClick={this.toggleComposer}></a>
                 </form>
               </div>
             }
           </div>
 
           {!this.state.composing &&
-            <a className="List-add-card" href="#" onClick={this.toggleComposer}>Add a card…</a>
+            <a className="ListTile-add-card" href="#" onClick={this.toggleComposer}>Add a card…</a>
           }
         </div>
       </div>
@@ -92,4 +92,4 @@ class List extends Component {
   }
 }
 
-export default List;
+export default ListTile;

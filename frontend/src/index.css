@@ -51,13 +51,13 @@ ol, ul {
   padding: 0;
 }
 
-.App-container {
+.WyeTrello-container {
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
-.App-header {
+.WyeTrello-header {
   height: 30px;
   position: relative;
   flex: none;
@@ -68,7 +68,7 @@ ol, ul {
   box-shadow: 0 1px 1px rgba(0,0,0,.1);
 }
 
-.App-header-logo {
+.WyeTrello-header-logo {
   bottom: 0;
   display: block;
   height: 30px;
@@ -86,11 +86,11 @@ ol, ul {
   background-color: transparent;
 }
 
-.App-header-logo:hover {
+.WyeTrello-header-logo:hover {
   opacity: .8;
 }
 
-.App-header-logo-default {
+.WyeTrello-header-logo-default {
   background-image: url('./wye_trello_works.png');
   background-position: 100% 0;
   background-repeat: no-repeat;
@@ -102,36 +102,36 @@ ol, ul {
   width: 150px;
 }
 
-.App-content {
+.WyeTrello-content {
   flex-grow: 1;
   outline: none;
   position: relative;
   overflow-y: auto;
 }
 
-.BoardsIndex {
+.Boards {
   margin: auto;
 }
 
-.BoardsIndex-container {
+.Boards-container {
   margin: 0 auto;
   max-width: 1250px;
   padding: 20px 16px 0;
 }
 
-.BoardsIndex-header {
+.Boards-header {
   margin: 0 0 0 38px;
   padding: 0 0 11px;
   position: relative;
 }
 
-.BoardsIndex-header-icon {
+.Boards-header-icon {
   left: -38px;
   position: absolute;
   top: 0;
 }
 
-.BoardsIndex-header-icon-member {
+.Boards-header-icon-member {
   color: #999;
   height: 32px;
   font-size: 20px;
@@ -147,11 +147,11 @@ ol, ul {
   text-decoration: none;
 }
 
-.BoardsIndex-header-icon-member:before {
+.Boards-header-icon-member:before {
   content: "\E938";
 }
 
-.BoardsIndex-header-name {
+.Boards-header-name {
   display: inline-block;
   line-height: 24px;
   margin: 3px 0 0;
@@ -159,19 +159,19 @@ ol, ul {
   font-weight: 700;
 }
 
-.BoardsIndex-list-container {
+.Boards-list-container {
   display: flex;
   flex-wrap: wrap;
 }
 
-.CreateBoardTile {
+.NewBoardLink {
   box-sizing: border-box;
   padding: 0 8px 8px 0;
   position: relative;
   width: 25%;
 }
 
-.CreateBoardTile-link {
+.NewBoardLink-link {
   border-radius: 3px;
   line-height: 20px;
   margin: 0 8px 8px 0;
@@ -188,7 +188,7 @@ ol, ul {
   width: inherit;
 }
 
-.CreateBoardTile-link:hover {
+.NewBoardLink-link:hover {
   background-color: #d6dadc;
   color: #4d4d4d;
 }
@@ -244,7 +244,7 @@ ol, ul {
   max-height: 40px;
 }
 
-.BoardsShow {
+.Board {
   background-color: rgb(0, 121, 191);
   position: absolute;
   left: 0;
@@ -253,7 +253,7 @@ ol, ul {
   bottom: 0;
 }
 
-.BoardsShow-content {
+.Board-content {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -261,7 +261,7 @@ ol, ul {
   transition: margin .1s ease-in;
 }
 
-.BoardsShow-header {
+.Board-header {
   flex: none;
   height: auto;
   overflow: hidden;
@@ -270,7 +270,7 @@ ol, ul {
   transition: padding .1s ease-in;
 }
 
-.BoardsShow-header-btn {
+.Board-header-btn {
   border-radius: 3px;
   color: #f6f6f6;
   cursor: default;
@@ -286,12 +286,12 @@ ol, ul {
   text-decoration: none;
 }
 
-.BoardsShow-canvas {
+.Board-canvas {
   position: relative;
   flex-grow: 1;
 }
 
-.BoardsShow-canvas-content {
+.Board-canvas-content {
   user-select: none;
   white-space: nowrap;
   margin-bottom: 10px;
@@ -306,7 +306,7 @@ ol, ul {
   left: 0;
 }
 
-.CreateBoard-overlay {
+.NewBoard-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -317,7 +317,7 @@ ol, ul {
 }
 
 
-.CreateBoard-box {
+.NewBoard-box {
   position: fixed;
   left: 50%;
   margin-top: 24px;
@@ -330,7 +330,7 @@ ol, ul {
   z-index: 25;
 }
 
-.CreateBoard-tile {
+.NewBoard-tile {
   background-color: #fff;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -347,7 +347,7 @@ ol, ul {
   z-index: 30;
 }
 
-.CreateBoard-close-button {
+.NewBoard-close-button {
   float: right;
   position: relative;
   right: -2px;
@@ -387,7 +387,7 @@ ol, ul {
   content: "\E916";
 }
 
-.CreateBoard-tile-input {
+.NewBoard-tile-input {
   position: relative;
   left: -8px;
   width: calc(100% - 18px - 16px);
@@ -409,7 +409,7 @@ ol, ul {
   cursor: text;
 }
 
-.CreateBoard-tile-input::placeholder {
+.NewBoard-tile-input::placeholder {
   color: #fff;
 }
 
@@ -427,12 +427,12 @@ ol, ul {
 }
 
 
-.CreateBoard-tile-input:hover {
+.NewBoard-tile-input:hover {
   background: hsla(0,0%,100%,.15);
   border-radius: 3px;
 }
 
-.CreateBoard-tile-btn {
+.NewBoard-tile-btn {
   margin-bottom: 8px;
   background: #5aac44;
   -webkit-box-shadow: 0 1px 0 #519839;
@@ -456,11 +456,11 @@ ol, ul {
   border-radius: 3px;
 }
 
-.CreateBoard-tile-btn:hover {
+.NewBoard-tile-btn:hover {
   background: #519839 100%;
 }
 
-.CreateBoard-tile-btn.disabled {
+.NewBoard-tile-btn.disabled {
   background: #f8f9f9;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -469,7 +469,7 @@ ol, ul {
   font-weight: 700;
 }
 
-.CreateBoard-tile-btn.disabled:hover {
+.NewBoard-tile-btn.disabled:hover {
   background: #f8f9f9;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -478,7 +478,7 @@ ol, ul {
   font-weight: 700;
 }
 
-.List {
+.ListTile {
   width: 270px;
   margin: 0 5px;
   height: 100%;
@@ -489,11 +489,11 @@ ol, ul {
   white-space: nowrap;
 }
 
-.List:first-child {
+.ListTile:first-child {
   margin-left: 10px;
 }
 
-.List-content {
+.ListTile-content {
   background: #e2e4e6;
   border-radius: 3px;
   box-sizing: border-box;
@@ -504,14 +504,14 @@ ol, ul {
   white-space: normal;
 }
 
-.List-header {
+.ListTile-header {
   flex: 0 0 auto;
   padding: 8px 10px;
   position: relative;
   min-height: 18px;
 }
 
-.List-header-title {
+.ListTile-header-title {
   font-weight: 700;
   margin: -3px -5px;
   padding: 3px 5px;
@@ -520,7 +520,7 @@ ol, ul {
   height: 24px;
 }
 
-.List-cards {
+.ListTile-cards {
   flex: 1 1 auto;
   margin-bottom: 0;
   overflow-y: auto;
@@ -531,7 +531,7 @@ ol, ul {
   min-height: 0;
 }
 
-.List-add-card {
+.ListTile-add-card {
   border-radius: 0 0 3px 3px;
   color: #838c91;
   display: block;
@@ -542,13 +542,13 @@ ol, ul {
   user-select: none;
 }
 
-.List-add-card:hover {
+.ListTile-add-card:hover {
   background-color: #cdd2d4;
   color: #4d4d4d;
   text-decoration: underline;
 }
 
-.List-composer {
+.ListTile-composer {
   box-sizing: border-box;
   border: none;
   border-bottom: 1px solid #ccc;
@@ -565,7 +565,7 @@ ol, ul {
   outline: 0;
 }
 
-.List-composer-add {
+.ListTile-composer-add {
   border-radius: 3px;
   border: none;
   cursor: pointer;
@@ -580,7 +580,7 @@ ol, ul {
   transition: background .3s ease;
 }
 
-.List-composer-close {
+.ListTile-composer-close {
   display: inline-block;
   font-family: trellicons;
   text-align: center;
@@ -591,11 +591,11 @@ ol, ul {
   color: #999;
 }
 
-.List-composer-close:before {
+.ListTile-composer-close:before {
   content: "\E916";
 }
 
-.CreateList {
+.NewList {
   width: 270px;
   margin: 0 5px;
   box-sizing: border-box;
@@ -617,14 +617,14 @@ ol, ul {
   margin-right: 10px;
 }
 
-.CreateList-placeholder {
+.NewList-placeholder {
   display: block;
   padding: 7px;
   color: hsla(0,0%,100%,.7);
   transition: color 85ms ease-in;
 }
 
-.CreateList-adding-list {
+.NewList-adding-list {
   height: auto;
   min-height: 30px;
   padding: 4px;
@@ -632,7 +632,7 @@ ol, ul {
   background-color: #e2e4e6;
 }
 
-.CreateList-input {
+.NewList-input {
   box-sizing: border-box;
   border: 1px solid #aaa;
   border-radius: 3px;
@@ -644,12 +644,12 @@ ol, ul {
   width: 100%;
 }
 
-.CreateList-controls {
+.NewList-controls {
   transition: margin 85ms ease-in,height 85ms ease-in;
   margin: 4px 0 0;
 }
 
-.CreateList-button {
+.NewList-button {
   border-radius: 3px;
   cursor: pointer;
   font-weight: 700;
@@ -664,7 +664,7 @@ ol, ul {
   background: #5aac44;
 }
 
-.CreateList-close {
+.NewList-close {
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -676,11 +676,11 @@ ol, ul {
   color: #999;
 }
 
-.CreateList-close:before {
+.NewList-close:before {
   content: "\E916";
 }
 
-.Card {
+.CardTile {
   background-color: #fff;
   border-bottom: 1px solid #ccc;
   border-radius: 3px;
@@ -694,14 +694,14 @@ ol, ul {
   z-index: 0;
 }
 
-.Card-details {
+.CardTile-details {
   overflow: hidden;
   padding: 6px 6px 2px 8px;
   position: relative;
   z-index: 10;
 }
 
-.Card-title {
+.CardTile-title {
   clear: both;
   display: block;
   margin: 0 0 4px;

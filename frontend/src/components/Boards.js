@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import BoardTile from './BoardTile';
-import CreateBoardTile from './CreateBoardTile';
+import NewBoardLink from './NewBoardLink';
 
-class BoardsIndex extends Component {
+class Boards extends Component {
   constructor(props) {
     super(props);
     this.state = { boards: [] };
@@ -16,23 +16,23 @@ class BoardsIndex extends Component {
 
   render() {
     return (
-      <div className="BoardsIndex">
-        <div className="BoardsIndex-container">
-          <div className="BoardsIndex-header">
-            <div className="BoardsIndex-header-icon">
-              <span className="BoardsIndex-header-icon-member"></span>
+      <div className="Boards">
+        <div className="Boards-container">
+          <div className="Boards-header">
+            <div className="Boards-header-icon">
+              <span className="Boards-header-icon-member"></span>
             </div>
-            <h3 className="BoardsIndex-header-name">Personal Boards</h3>
+            <h3 className="Boards-header-name">Personal Boards</h3>
           </div>
 
-          <ul className="BoardsIndex-list-container">
+          <ul className="Boards-list-container">
             {
               this.state.boards.map((board) => {
                 return <BoardTile name={board.name} id={board.id} key={board.id} />
               })
             }
 
-            <CreateBoardTile />
+            <NewBoardLink />
           </ul>
         </div>
       </div>
@@ -40,4 +40,4 @@ class BoardsIndex extends Component {
   }
 }
 
-export default BoardsIndex;
+export default Boards;

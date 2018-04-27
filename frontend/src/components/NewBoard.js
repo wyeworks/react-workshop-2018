@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class CreateBoard extends Component {
+class NewBoard extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -53,18 +53,18 @@ class CreateBoard extends Component {
 
   render () {
     return (
-      <div onClick={this.back} className="CreateBoard-overlay">
-        <div className="CreateBoard-box" onClick={this.preventBack} >
+      <div onClick={this.back} className="NewBoard-overlay">
+        <div className="NewBoard-box" onClick={this.preventBack} >
           <form onSubmit={this.handleSubmit}>
-            <div className="CreateBoard-tile">
-              <button type="button" className="CreateBoard-close-button" onClick={this.back}>
+            <div className="NewBoard-tile">
+              <button type="button" className="NewBoard-close-button" onClick={this.back}>
                 <span className="icon-sm icon-close"></span>
               </button>
               <div>
-                <input placeholder="Add board title" value={this.state.title} onChange={this.titleChange} className="CreateBoard-tile-input"/>
+                <input placeholder="Add board title" value={this.state.title} onChange={this.titleChange} className="NewBoard-tile-input"/>
               </div>
             </div>
-            <button className={`CreateBoard-tile-btn ${ this.state.title ? '' : 'disabled' }`} disabled={!this.state.title} type="">Create Board</button>
+            <button className={`NewBoard-tile-btn ${ this.state.title ? '' : 'disabled' }`} disabled={!this.state.title} type="">Create Board</button>
           </form>
         </div>
       </div>
@@ -72,4 +72,4 @@ class CreateBoard extends Component {
   }
 }
 
-export default CreateBoard;
+export default NewBoard;
