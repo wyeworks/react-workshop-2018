@@ -306,7 +306,7 @@ ol, ul {
   left: 0;
 }
 
-.CreateBoard-overlay {
+.NewBoard-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -317,7 +317,7 @@ ol, ul {
 }
 
 
-.CreateBoard-box {
+.NewBoard-box {
   position: fixed;
   left: 50%;
   margin-top: 24px;
@@ -330,7 +330,7 @@ ol, ul {
   z-index: 25;
 }
 
-.CreateBoard-tile {
+.NewBoard-tile {
   background-color: #fff;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -347,7 +347,7 @@ ol, ul {
   z-index: 30;
 }
 
-.CreateBoard-close-button {
+.NewBoard-close-button {
   float: right;
   position: relative;
   right: -2px;
@@ -387,7 +387,7 @@ ol, ul {
   content: "\E916";
 }
 
-.CreateBoard-tile-input {
+.NewBoard-tile-input {
   position: relative;
   left: -8px;
   width: calc(100% - 18px - 16px);
@@ -409,7 +409,7 @@ ol, ul {
   cursor: text;
 }
 
-.CreateBoard-tile-input::placeholder {
+.NewBoard-tile-input::placeholder {
   color: #fff;
 }
 
@@ -427,12 +427,12 @@ ol, ul {
 }
 
 
-.CreateBoard-tile-input:hover {
+.NewBoard-tile-input:hover {
   background: hsla(0,0%,100%,.15);
   border-radius: 3px;
 }
 
-.CreateBoard-tile-btn {
+.NewBoard-tile-btn {
   margin-bottom: 8px;
   background: #5aac44;
   -webkit-box-shadow: 0 1px 0 #519839;
@@ -456,11 +456,11 @@ ol, ul {
   border-radius: 3px;
 }
 
-.CreateBoard-tile-btn:hover {
+.NewBoard-tile-btn:hover {
   background: #519839 100%;
 }
 
-.CreateBoard-tile-btn.disabled {
+.NewBoard-tile-btn.disabled {
   background: #f8f9f9;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -469,7 +469,7 @@ ol, ul {
   font-weight: 700;
 }
 
-.CreateBoard-tile-btn.disabled:hover {
+.NewBoard-tile-btn.disabled:hover {
   background: #f8f9f9;
   -webkit-box-shadow: none;
   box-shadow: none;

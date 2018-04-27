@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Boards from './components/Boards';
 import Board from './components/Board';
-import CreateBoard from './components/CreateBoard';
+import NewBoard from './components/NewBoard';
 
 class WyeTrello extends Component {
   render() {
@@ -22,7 +22,7 @@ class WyeTrello extends Component {
               <Route path='/boards/:bordId' component={Board}/>
             </Switch>
           </div>
-          <Route path="/boards/new" component={CreateBoard} />
+          <Route path="/boards/new" component={NewBoard} />
         </div>
       </Router>
     );
