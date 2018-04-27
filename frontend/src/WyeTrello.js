@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Boards from './components/Boards';
-import BoardsShow from './components/BoardsShow';
+import Board from './components/Board';
 import CreateBoard from './components/CreateBoard';
 
 class WyeTrello extends Component {
@@ -19,7 +19,7 @@ class WyeTrello extends Component {
             <Switch>
               <Route exact path='/' component={Boards}/>
               <Route path='/boards/new' component={Boards}/>
-              <Route path='/boards/:bordId' component={BoardsShow}/>
+              <Route path='/boards/:bordId' component={Board}/>
             </Switch>
           </div>
           <Route path="/boards/new" component={CreateBoard} />
