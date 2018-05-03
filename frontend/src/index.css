@@ -51,13 +51,13 @@ ol, ul {
   padding: 0;
 }
 
-.WyeTrello-container {
+.App-container {
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
-.WyeTrello-header {
+.App-header {
   height: 30px;
   position: relative;
   flex: none;
@@ -68,7 +68,7 @@ ol, ul {
   box-shadow: 0 1px 1px rgba(0,0,0,.1);
 }
 
-.WyeTrello-header-logo {
+.App-header-logo {
   bottom: 0;
   display: block;
   height: 30px;
@@ -86,11 +86,11 @@ ol, ul {
   background-color: transparent;
 }
 
-.WyeTrello-header-logo:hover {
+.App-header-logo:hover {
   opacity: .8;
 }
 
-.WyeTrello-header-logo-default {
+.App-header-logo-default {
   background-image: url('./wye_trello_works.png');
   background-position: 100% 0;
   background-repeat: no-repeat;
@@ -102,7 +102,7 @@ ol, ul {
   width: 150px;
 }
 
-.WyeTrello-content {
+.App-content {
   flex-grow: 1;
   outline: none;
   position: relative;
