@@ -6,7 +6,7 @@ class Board extends Component {
   constructor(props) {
     super(props);
     this.state = { name: "", lists: [] };
-    this.boardId = this.props.match.params.bordId;
+    this.boardId = this.props.match.params.boardId;
   }
 
   componentDidMount() {
