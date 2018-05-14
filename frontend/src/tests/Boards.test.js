@@ -37,9 +37,6 @@ describe('components rendered', () => {
 
   it('renders one NewBoardLink component', () => {
     expect(wrapper.find(Boards)).toHaveLength(1);
-
-    setImmediate(() => {
-      expect(wrapper.find(NewBoardLink)).toHaveLength(1);
-    });
+    expect(wrapper.find(NewBoardLink)).toHaveLength(1);
   });
 });
