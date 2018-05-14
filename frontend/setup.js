@@ -7,7 +7,7 @@ global.shallow = shallow;
 
 // Fetch mock
 const boardsFetch = Promise.resolve({
-  json: () => Promise.resolve([{ id: 1, name: 'Board1' }]),
+  json: () => Promise.resolve([{ id: 1, name: 'Board1' }, { id: 2, name: 'Board2' }]),
 });
 
 global.fetch = () => boardsFetch;

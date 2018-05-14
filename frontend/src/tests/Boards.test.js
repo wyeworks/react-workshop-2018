@@ -8,8 +8,7 @@ describe('state', () => {
     expect(wrapper.state('boards')).toEqual([]);
 
     setImmediate(() => {
-      wrapper.update();
-      expect(wrapper.state('boards')).toEqual([{ id: 1, name: 'Board1' }]);
+      expect(wrapper.state('boards')).toEqual([{ id: 1, name: 'Board1' }, { id: 2, name: 'Board2' }]);
     });
   });
 })
