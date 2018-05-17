@@ -9,6 +9,10 @@
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.1"
   },
+  "devDependencies": {
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
