@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import BoardTile from './BoardTile';
+import { Link } from 'react-router-dom';
 
 class Boards extends Component {
   constructor(props) {
@@ -32,9 +33,9 @@ class Boards extends Component {
               })
             }
             <li className="NewBoardLink">
-              <a className="NewBoardLink-link">
+              <Link className="NewBoardLink-link" to='/boards/new'>
                 Create new board…
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

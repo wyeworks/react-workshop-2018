@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Boards from './components/Boards';
+import NewBoard from './components/NewBoard';
 import Board from './components/Board';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
 
 class App extends Component {
   render() {
@@ -14,8 +15,12 @@ class App extends Component {
             </Link>
           </div>
           <div className="App-content">
-            <Route exact path='/' component={Boards}/>
-            <Route path='/boards/:boardId' component={Board}/>
+            <Switch>
+              <Route exact path='/' component={Boards}/>
+              <Route path='/boards/new' component={Boards}/>
+              <Route path='/boards/:boardId' component={Board}/>
+            </Switch>
+            <Route path='/boards/new' component={NewBoard}/>
           </div>
         </div>
       </BrowserRouter>
