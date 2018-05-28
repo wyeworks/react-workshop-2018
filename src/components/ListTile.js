@@ -1,6 +1,20 @@
 import React, { Component } from 'react';
 
 class ListTile extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      composing: false,
+      newCardText: ''
+    };
+  }
+
+  toggleComposer = () => {
+    this.setState(prevState => ({
+      composing: !prevState.composing
+    }));
+  }
+
   render() {
     return (
       <div className="ListTile">
@@ -22,7 +36,17 @@ class ListTile extends Component {
                 )
               })
             }
-            <a className="ListTile-add-card">Add a card…</a>
+            { this.state.composing ?
+              <div>
+                <form>
+                  <textarea className="ListTile-composer"></textarea>
+                  <input className="ListTile-composer-add" type="submit" value="Add"/>
+                  <div className="ListTile-composer-close" onClick={this.toggleComposer}></div>
+                </form>
+              </div>
+            :
+              <a className="ListTile-add-card" onClick={this.toggleComposer}>Add a card…</a>
+            }
           </div>
         </div>
       </div>
