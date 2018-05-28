@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Boards from './components/Boards';
 
 class App extends Component {
   render() {
@@ -10,6 +11,7 @@ class App extends Component {
           </a>
         </div>
         <div className="App-content">
+          <Boards/>
         </div>
       </div>
     );
