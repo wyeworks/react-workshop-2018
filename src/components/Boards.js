@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import BoardTile from './BoardTile';
 
 class Boards extends Component {
   constructor(props) {
@@ -27,18 +28,7 @@ class Boards extends Component {
           <ul className="Boards-list-container">
             {
               this.state.boards.map((board) => {
-                return (
-                  <li className="BoardTile" key={board.id}>
-                    <a className="BoardTile-link">
-                      <span className="BoardTile-fade"></span>
-                      <span className="BoardTile-details">
-                        <span className="BoardTile-details-name">
-                          {board.name}
-                        </span>
-                      </span>
-                    </a>
-                  </li>
-                )
+                return <BoardTile key={board.id} id={board.id} name={board.name} />
               })
             }
             <li className="NewBoardLink">
