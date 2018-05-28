@@ -1,6 +1,18 @@
 import React, { Component } from 'react';
 
 class Boards extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { boards: [] };
+  }
+
+
+  componentDidMount() {
+    fetch("/boards").then(res => res.json()).then((boards) => {
+      this.setState({ boards });
+    });
+  }
+
   render() {
     return (
       <div className="Boards">
@@ -13,26 +25,22 @@ class Boards extends Component {
           </div>
 
           <ul className="Boards-list-container">
-            <li className="BoardTile">
-              <a className="BoardTile-link">
-                <span className="BoardTile-fade"></span>
-                <span className="BoardTile-details">
-                  <span className="BoardTile-details-name">
-                    Workshop
-                  </span>
-                </span>
-              </a>
-            </li>
-            <li className="BoardTile">
-              <a className="BoardTile-link">
-                <span className="BoardTile-fade"></span>
-                <span className="BoardTile-details">
-                  <span className="BoardTile-details-name">
-                    Team
-                  </span>
-                </span>
-              </a>
-            </li>
+            {
+              this.state.boards.map((board) => {
+                return (
+                  <li className="BoardTile" key={board.id}>
+                    <a className="BoardTile-link">
+                      <span className="BoardTile-fade"></span>
+                      <span className="BoardTile-details">
+                        <span className="BoardTile-details-name">
+                          {board.name}
+                        </span>
+                      </span>
+                    </a>
+                  </li>
+                )
+              })
+            }
             <li className="NewBoardLink">
               <a className="NewBoardLink-link">
                 Create new board…
