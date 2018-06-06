@@ -16,6 +16,16 @@ class ListTile extends Component {
     }));
   }
 
+  deleteList = () => {
+    fetch(`/boards/${this.props.boardId}/lists/${this.props.id}`, {
+      method: 'DELETE'
+    }).then(res => {
+      if (res.ok && res.status === 204) {
+        this.props.onListDeletion(this.props.id);
+      }
+    });
+  }
+
   newCardTextChange = (e) => {
     this.setState({
       newCardText: e.target.value
@@ -52,6 +62,8 @@ class ListTile extends Component {
           <div className="ListTile-header">
             <div className="ListTile-header-title">
               {this.props.name}
+
+              <a style={{float: 'right', color: 'red'}} onClick={this.deleteList}>Delete</a>
             </div>
           </div>
           <div className="ListTile-cards">
